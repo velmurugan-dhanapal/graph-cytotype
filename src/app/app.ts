@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   standalone: false,
   styleUrl: './app.css'
 })
-export class App {
-  protected title = 'angular-crash';
+export class App {  
 }

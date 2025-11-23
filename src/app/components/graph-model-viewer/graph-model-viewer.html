@@ -1,0 +1,36 @@
+<div class="graph-page-container">
+
+  <!-- Graph -->
+  <div class="cy-container-wrapper">    <!-- Graph title -->
+    
+    <div #cyContainer class="cy-container"></div>
+  </div>
+
+  <!-- Chatbot -->
+  <div class="chatbot-panel">
+    <h3>Graph Query Assistant</h3>
+
+    <div #chatWindow class="chat-window">
+      <div *ngFor="let msg of chatMessages" class="chat-message">
+        <div class="chat-label" *ngIf="msg.user">You</div>
+        <div class="chat-label" *ngIf="!msg.user">Assistant</div>
+
+        <div [ngClass]="{'user-msg': msg.user, 'bot-msg': !msg.user}">
+          {{ msg.text }}
+        </div>
+      </div>
+    </div>
+
+    <input type="text"
+           placeholder="Type your question..."
+           [(ngModel)]="userInput"
+           (keydown.enter)="sendMessage()"
+    />
+
+    <div class="chat-controls">
+      <button (click)="sendMessage()">Submit</button>
+      <button (click)="clearChat()">Clear Chat</button>
+    </div>
+  </div>
+
+</div>

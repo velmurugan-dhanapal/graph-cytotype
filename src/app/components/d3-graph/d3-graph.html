@@ -1,0 +1,10 @@
+<div class="graph-wrapper">
+  <div #graphContainer class="graph"></div>
+
+  <div class="info-panel" *ngIf="selectedNode">
+    <h3>Node Properties</h3>
+    <div *ngFor="let key of objectKeys(selectedNode)">
+      <p><strong>{{ key }}:</strong> {{ selectedNode[key] }}</p>
+    </div>
+  </div>
+</div>

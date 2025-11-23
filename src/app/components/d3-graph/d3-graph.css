@@ -1,0 +1,17 @@
+.graph-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.graph {
+  flex: 3;
+  border: 1px solid #ccc;
+}
+
+.info-panel {
+  flex: 1;
+  padding: 10px;
+  background-color: #f4f8ff;
+  border-left: 1px solid #ccc;
+  font-size: 14px;
+}
